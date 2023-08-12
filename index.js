@@ -52,6 +52,10 @@ app.post("/ticket", (req, res) => {
   });
 });
 
+app.use((req, res) => {
+  res.status(404).send("<h1>Make a POST request to /ticket route instead. Thank you.</h1>");
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
