@@ -1,4 +1,4 @@
-echo "# Ticketing System API
+# Ticketing System API
 
 Welcome to the Ticket System API! This API allows you to manage and assign incoming tickets to users based on the Round Robin principle.
 
