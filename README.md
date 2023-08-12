@@ -24,28 +24,26 @@ To run this API on your local machine, follow these steps:
 
 5. The API server will start on http://localhost:3000 by default. You can access the API endpoints using a tool like Postman or by making HTTP requests.
 
-## Usage
-
-You can use the following endpoints to interact with the API:
-
-## Assuming your Node.js server is running on http://localhost:3000, follow these steps:
+<h2>Assuming your Node.js server is running on http://localhost:3000, follow these steps: </h2>
 
 1. Open Postman.
-2.Select the "POST" request method.
+2. Select the "POST" request method.
 3. Enter the URL: http://localhost:3000/ticket.
 4. In the "Headers" section, add a Content-Type header with the value application/json.
 5. In the "Body" section, select the "raw" option and choose "JSON (application/json)" from the dropdown.
 6. Add the following JSON data in the request body:
+
+```
 json
-Copy code
 {
   "user_id": "#1",
   "issue": "Network connectivity issue"
 }
-7. Click the "Send" button to send the POST request.
-8. You should receive a response similar to:
+```
+8. Click the "Send" button to send the POST request.
+9. You should receive a response similar to:
+```
 json
-Copy code
 {
   "message": "Ticket created and assigned successfully.",
   "success": true,
@@ -54,5 +52,6 @@ Copy code
     "assigned_to": "#1"
   }
 }
-9. This indicates that the ticket was successfully created and assigned to a person based on the Round Robin principle.
-10. You can repeat the process to create and assign more tickets, changing the "user_id" and "issue" values in the JSON request body as needed.
+```
+10. This indicates that the ticket was successfully created and assigned to a person based on the Round Robin principle.
+11. You can repeat the process to create and assign more tickets, changing the "user_id" and "issue" values in the JSON request body as needed.
